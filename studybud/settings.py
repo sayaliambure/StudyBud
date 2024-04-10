@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-qy4^=bh(h_&wqqced+c_v801xme-69o%ke-#kefg5^v6w_22x)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1']
 
 
 # Application definition
@@ -136,3 +136,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOW_ALL_ORIGINS = True
 # would allow all other websites to access our websites
+
+import os
+STATICFILES_DIRS = os.path.join(BASE_DIR,  'static'),
+STATIC_ROOT = os.path.join(BASE_DIR,  'staticfiles_build', 'static')
