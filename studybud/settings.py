@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -76,6 +76,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "studybud.wsgi.application"
+# WSGI_APPLICATION = "studybud.wsgi.app"
+
 
 
 # Database
@@ -120,10 +122,15 @@ USE_TZ = True
 STATIC_URL = "static/"
 MEDIA_URL = '/images/'
 
-STATICFILES_DIRS = [
-#   lets django know that we have static folder in base directory
-  BASE_DIR / 'static'
-]
+# STATICFILES_DIRS = [
+# #   lets django know that we have static folder in base directory
+#   BASE_DIR / 'static'
+# ]
+
+
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+
 
 MEDIA_ROOT = BASE_DIR / 'static/images'
 
@@ -137,6 +144,3 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CORS_ALLOW_ALL_ORIGINS = True
 # would allow all other websites to access our websites
 
-# import os
-# STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
