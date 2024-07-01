@@ -1,3 +1,5 @@
 api.html
 .vercel
 djangoenv
+.env
+studybud/__pycache__
