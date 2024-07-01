@@ -25,7 +25,8 @@ SECRET_KEY = "django-insecure-qy4^=bh(h_&wqqced+c_v801xme-69o%ke-#kefg5^v6w_22x)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'localhost']
+# ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -97,7 +98,7 @@ DATABASES = {
         "NAME": 'studybudDB',
         "USER": 'postgres',
         "PASSWORD": 'QwerTy#123',
-        "HOST": 'studybud-pyjc35wr8-sayalis-projects-f949491c.vercel.app',
+        "HOST": 'localhost',
         "PORT": '5433'
         
     }
