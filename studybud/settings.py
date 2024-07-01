@@ -97,7 +97,7 @@ DATABASES = {
         "NAME": 'studybudDB',
         "USER": 'postgres',
         "PASSWORD": 'QwerTy#123',
-        "HOST": 'localhost',
+        "HOST": 'studybud-pyjc35wr8-sayalis-projects-f949491c.vercel.app',
         "PORT": '5433'
         
     }
