@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-qy4^=bh(h_&wqqced+c_v801xme-69o%ke-#kefg5^v6w_22x)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'localhost']
 
 
 # Application definition
@@ -83,12 +83,26 @@ WSGI_APPLICATION = "studybud.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
+
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        "NAME": 'studybudDB',
+        "USER": 'postgres',
+        "PASSWORD": 'QwerTy#123',
+        "HOST": 'localhost',
+        "PORT": '5433'
+        
     }
 }
+
 
 
 # Password validation
