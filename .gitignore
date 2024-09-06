@@ -3,4 +3,4 @@ api.html
 djangoenv
 .env
 studybud/__pycache__
-supabase storage api keys.txt
+supabase_storage_api_keys.txt
